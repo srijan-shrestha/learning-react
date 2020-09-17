@@ -13,9 +13,10 @@
     "axios": "^0.20.0",
     "install": "^0.13.0",
     "postcss-cli": "^7.1.2",
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "react-spring": "^8.0.27",
     "tailwindcss": "^1.8.10"
   },
   "scripts": {

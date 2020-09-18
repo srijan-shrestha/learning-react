@@ -15,8 +15,7 @@ function App() {
     <Router>
 
     <Header />
-
-    <HelloWorld name="Srijan"/>
+    
     <Switch>
       <Route exact path="/">
         <h1 className="font-bold text-2xl">This is the home page</h1>

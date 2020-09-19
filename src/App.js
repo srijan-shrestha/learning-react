@@ -4,10 +4,12 @@ import {
   Switch,
   Route
 } from "react-router-dom"
-import  HelloWorld from './Components/HelloWorld';
 import  Footer from './Components/Footer';
-import  CounterExample from './Components/CounterExample';
 import  Header from './Components/Header';
+import  Home from './Views/Home';
+import  About from './Views/About';
+
+
 
 function App() {
   return (
@@ -15,15 +17,17 @@ function App() {
     <Router>
 
     <Header />
-    
+    <div className="p-3">
+      
     <Switch>
       <Route exact path="/">
-        <h1 className="font-bold text-2xl">This is the home page</h1>
+        <Home />
       </Route>
       <Route path="/about">
-      <h1 className="font-bold text-2xl">About us</h1>
+      <About />
       </Route>
     </Switch>
+    </div>
 
     <Footer />
 

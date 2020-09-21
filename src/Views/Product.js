@@ -7,7 +7,8 @@ function Product() {
     const { id } = useParams()
     const [product, setProduct] = useState({
         loading: false,
-        data: null
+        data: null,
+        error: false
     })
     // Create your own Mock API: https://mockapi.io/
     const url = `https://5e9623dc5b19f10016b5e31f.mockapi.io/api/v1/products/${id}`
@@ -16,15 +17,30 @@ function Product() {
     useEffect(() => {
         setProduct({
             loading: true,
-            data: null
+            data: null,
+            error: false
         })
         axios.get(url).then(response =>{
             setProduct({
                 loading: false,
-                data: response.data
+                data: response.data,
+                error: false
+            })
+        })
+        .catch(error => {
+            setProduct({
+                loading: false,
+                data: null,
+                error: true
             })
         })
     }, [url])
+
+    if(product.error) {
+        content = <p>
+            There was an error fetching the product.
+        </p>
+    }
 
     if(product.loading) {
         content = <Loader />

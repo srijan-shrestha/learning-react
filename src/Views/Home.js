@@ -45,6 +45,29 @@ function Home() {
         content = <Loader />
     }
 
+    if (products.data) {
+        content = 
+        products.data.map((product, key) => 
+        <div>
+            <h1 className="font-bold text-2xl mb-3" >
+                {product.name}
+            </h1>
+            <div>
+                <img
+                    src={product.images[0].imageUrl}
+                    alt={product.name}
+                />
+            </div>
+            <div className="font-bold text-xl mb-3">
+                $ {product.price}
+            </div>
+            <div>
+                {product.description}
+            </div>
+        </div>
+        )
+    }
+
     return (
         <div>
             <h1 className="font-bold text-2xl mb-3">Best Sellers</h1>

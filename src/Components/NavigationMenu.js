@@ -26,7 +26,7 @@ function NavigationMenu(props){
                         About
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link 
                         to="/products/:id" 
                         className="text-blue-500 py-3 border-b block"
@@ -34,7 +34,7 @@ function NavigationMenu(props){
                     >
                         Product
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

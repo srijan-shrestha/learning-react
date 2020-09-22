@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import Loader from '../Components/Loader'
+import ProductCard from '../Components/ProductCard'
 
 function Home() {
     const [products, setProducts] = useState({
@@ -49,21 +50,9 @@ function Home() {
         content = 
         products.data.map((product, key) => 
         <div>
-            <h1 className="font-bold text-2xl mb-3" >
-                {product.name}
-            </h1>
-            <div>
-                <img
-                    src={product.images[0].imageUrl}
-                    alt={product.name}
-                />
-            </div>
-            <div className="font-bold text-xl mb-3">
-                $ {product.price}
-            </div>
-            <div>
-                {product.description}
-            </div>
+            <ProductCard 
+                product={product}
+            />
         </div>
         )
     }

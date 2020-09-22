@@ -26,6 +26,7 @@ function ProductCard(props) {
             <div className="mb-3">
                 {props.product.description}    
             </div>
+            
             </div>
         </div>
     )

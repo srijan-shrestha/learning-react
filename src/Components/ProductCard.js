@@ -26,7 +26,11 @@ function ProductCard(props) {
             <div className="mb-3">
                 {props.product.description}    
             </div>
-            
+            <Link to={`/products/${props.product.id}`}
+            className="bg-blue-500 text-white p-2 flex w-full justify-center"
+            >View
+            </Link>
+
             </div>
         </div>
     )

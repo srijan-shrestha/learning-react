@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 function ProductCard(props) {
     return (
-        <div className="border mb-4 rounded overflow-hidden">
+        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">    
+            <div className="border mb-4 rounded overflow-hidden">
             <Link to={`/products/${props.product.id}`}>
                 <div
                     style={{
@@ -32,6 +33,7 @@ function ProductCard(props) {
             </Link>
 
             </div>
+        </div>
         </div>
     )
 }

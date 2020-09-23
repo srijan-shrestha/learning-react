@@ -24,12 +24,13 @@ function Home() {
 
     if (products.data) {
         content = 
+        
         products.data.map((product, key) => 
-        <div key={key}>
-            <ProductCard 
-                product={product}
-            />
-        </div>
+            <div key={key}>
+                <ProductCard 
+                    product={product}
+                />
+            </div>
         )
     }
 
